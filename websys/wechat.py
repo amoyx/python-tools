@@ -34,7 +34,7 @@ class WeiXin:
         return req.get('data').get('openid')
 
     # 获取用户的openid等信息
-    def get_user_info(self, openid=""):
+    def get_user_info(self, nickname="abcde"):
         userlist=self.get_user_list()
         token = self.get_token()
         i=0
@@ -42,7 +42,7 @@ class WeiXin:
             url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=%s&openid=%s&lang=zh_CN" % (token,userlist[i])
             html=urllib.request.urlopen(url)
             req=json.loads(html.read().decode())
-            if req.get('nickname') == '鸡蛋砸石头' :
+            if req.get('nickname') == nickname :
                 return req
             else:
                 continue
@@ -141,7 +141,3 @@ class WeiXin:
         data = json.dumps(data)
         res = requests.post(url=url, data=data)
         return res
-
-wx=WeiXin(appid="wx9300bc42497e6570",secret="7d396cf737e016ad8785279c36039014")
-r=wx.do_push_template_msg()
-print(r)
