@@ -7,6 +7,7 @@ from django.views.generic.base import TemplateView
 from django.views.decorators.csrf  import csrf_exempt,csrf_protect
 from django.contrib.auth.decorators import  login_required
 from django.conf import settings
+import websys.host
 
 # Create your views here.
 
@@ -14,7 +15,7 @@ class LoginIndexView(TemplateView):
     template_name = 'accounts/index.html'
 
 @csrf_exempt
-def user_login(request):
+def UserLogin(request):
     if request.method == 'POST':
         try:
             username = request.POST.get("username")
@@ -28,7 +29,8 @@ def user_login(request):
         else:
             return HttpResponse("Error:用户名或密码错误！")
     else:
-        return HttpResponse("Error:用户名和密码输入有误！")
+        return HttpResponseRedirect(settings.LOGIN_URL)
+        # return HttpResponse("Error:用户名和密码输入有误！")
 
 def UserLogout(request):
     logout(request)
@@ -46,3 +48,7 @@ def sys_main(request):
         return HttpResponseRedirect(settings.LOGIN_URL)
     else:
         return render_to_response("engine/index.html")
+
+
+
+
