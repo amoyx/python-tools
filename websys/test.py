@@ -19,14 +19,3 @@ def bubble(numbers):
                 numbers[j], numbers[i] = numbers[i], numbers[j]
     return numbers
             # print(str(array[j]) +  "   " + str(array[j+1]))
-
-
-
-client = AcsClient("LTAImVftNjtoLKmv","YadvgMbU2iDAdvc3DJNUUEJprvYPZm","cn-shanghai")
-
-request = DescribeDBInstancesRequest.DescribeDBInstancesRequest()
-request.set_PageSize(1)
-c = CreateDBInstanceRequest.CreateDBInstanceRequest()
-
-response = client.do_action_with_exception(request)
-print(response)
