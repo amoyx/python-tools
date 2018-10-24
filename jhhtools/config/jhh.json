@@ -1,0 +1,6 @@
+{
+  "db_host": "192.168.1.122",
+  "db_user": "ops",
+  "db_password": "abc+123",
+  "db_name": "opsmanage"
+}

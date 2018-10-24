@@ -1,0 +1,7 @@
+/.idea
+/static/
+/venv/
+*.pyc
+*.pyo
+/conf/local_settings.py
+/temp_file/

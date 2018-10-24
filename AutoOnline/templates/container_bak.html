@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>container</title>
+</head>
+<body>
+
+  <style>
+      .container,.container td,.container th {
+          text-align: center;
+          width: auto;
+          font-size: 12px;
+          border-collapse:collapse;
+          border:1px  solid #999999;
+      }
+  </style>
+  <table    cellpadding="5" class="container">
+    <tr><td>状态</td><td>结果</td></tr>
+   {% if context %}
+       {% for key,value in context.items %}
+          <tr><td>{{ key }}</td><td> {{ value }}</td></tr>
+       {% endfor %}
+   {% endif %}
+  </table>
+  <h5 style="color: red;"> {{ result }} 。。。。。。</h5>
+</body>
+</html>
