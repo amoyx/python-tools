@@ -342,7 +342,7 @@ class dockerTools(fileOperationTools):
     # push docker镜像到registry
     def push_image(self):
         if self.run_env == "prod" or self.run_env == "uat" or self.run_env == "staging":
-            auth_config = {"username": "jinhuhang", "password": "qJrN%h1sn58p"}
+            auth_config = {"username": "jinhuhang", "password": "qJhhN%h1sn58pass"}
         else:
             auth_config = {}
         try:
