@@ -2,5 +2,5 @@
   "registry_host": "docker.jhh.com",
   "tomcat_docker_base_image": "docker.jhh.com/tomcat8:5.30",
   "jdk_docker_base_image": "docker.jhh.com/jdk:1.8",
-  "ding_talk": "https://oapi.dingtalk.com/robot/send?access_token=c4cssssb5d684dc4f82f74b81bec672"
+  "ding_talk": "https://oapi.dingtalk.com/robot/send?access_token=token"
  }
