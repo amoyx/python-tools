@@ -1,4 +1,4 @@
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 configparser==3.5.0
 docker==3.2.1
